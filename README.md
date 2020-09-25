@@ -13,6 +13,6 @@ A simple startpage to meet my needs. forked from Kiersto, and remixed from Wolfi
 
 Credits
 ----
-Image used in the sidebar are by artist [Meisagoy](https://twitter.com/yogasiem).
+Image used on the side is by artist [Meisagoy](https://twitter.com/yogasiem).
 
 Based by [tayumpee's starpage 2](//github.com/tayumpee/start_page2_firefox_and_chrome) inspired by [Vallodes](https://www.reddit.com/u/vallode/) tutorial.
