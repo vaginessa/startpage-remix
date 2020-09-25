@@ -1,122 +1,109 @@
 <!DOCTYPE html>
-<!--Starpage by -->
 <html>
 	<head>
-		<title>~</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" style="text/css" href="general.css" />
+		<meta charset="utf-8">
+		<title>Nagi - Home</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="scripts/transitions.js"></script>
 	</head>
 
-	<body>	
-		<div class="main" id="main1" style="display: block">
-			<img class="image-wrapper" src="img/side4.gif"/>
-			<header>
-            	<h1>Welcome to the wired, <span class="flair">K</span></h1>
-                <h2 class="litequote">He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it <span class="flair">himself</span></h2>
-			</header>
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
 
-			<div>
-				<form action="https://duckduckgo.com/" method="GET" autocomplete="off">
-					<label for="q">></label>
+		<!-- Welcome screen -->
+		<div id="main_window">
+			<img id=leftImg src="assets/img/image.png" class="image">
+			<div id="content">
+				<h1 class="title">Welcome</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+
+		<!-- Web search -->
+				<div id="web_search">
+					<form action="https://google.com/search" method="GET" autocomplete="off" target="_blank">
+						<label for="q">></label>
 						<input autofocus
-						id="q"
-			        	name="q"
-						type="search"
-						placeholder="Search with duckduckgo...">
-				</form>
+			        	 		id="q"
+			         			name="q"
+			         			type="search"
+			         			placeholder="search with google...">
+					</form>
+				</div>
+
+		<!-- Links -->
+				<nav>
+					<div id=links_container>
+						<ul>
+							<a class="subtitle">Network</a>
+								<li><a target="_blank" href="https://10.10.10.1/">EdgeRouter</a></li>
+								<li><a href="https://gitlab.com/"></a></li>
+								<li><a href="https://www.onedrive.live.com/"></a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Media</a>
+								<li><a href="https://www.netflix.com/browse">Netflix</a></li>
+								<li><a href="https://soundcloud.com/discover">Soundcloud</a></li>
+								<li><a href="https://www.youtube.com/">YouTube</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Social medias</a>
+								<li><a href="https://www.instagram.com/">Instagram</a></li>
+								<li><a href="https://www.reddit.com/">Reddit</a></li>
+								<li><a href="https://twitter.com/home">Twitter</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Studies</a>
+								<li><a href="https://www.epfl.ch/campus/security-safety/en/health/coronavirus-covid19/">COVID-19</a></li>
+								<li><a href="https://ewa.epfl.ch/">Mail</a></li>
+								<li><a href="https://moodle.epfl.ch/">Moodle</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Others</a>
+								<li><a href="https://www.digitec.ch/">Digitec</a></li>
+								<li><a href="http://192.168.1.130:8080">Komga</a></li>
+								<li><a href="https://rarbgenter.org/index80.php">RARBG</a></li>
+						</ul>
+						<!-- works but I'd rather have auto streaming music, than rely on tracks. Don't know how to yet
+						<audio autoplay hidden>
+							<source src="assets/audio/background-00.m4a" type="audio/mpeg">
+								if you can see this then I have failed
+						</audio>
+						-->
+					</div>
+				</nav>
 			</div>
+		</div>
 
-            <nav>
-            	<ul class="blue">
-            		<a>Frequent</a>
-            			<li><a href="https://github.com/Kierstro">Github</a></li>
-            			<li><a href="https://twitter.com/home">Twitter</a></li>
-            			<li><a href="https://trello.com/">Trello</a></li>
-            	</ul>
+		<!-- Footer -->
+		<div class="bottom">
+			<p class="credits">
+				<a href="https://twitter.com/yogasiem">Art by Meisagoy</a>
+			</p>
 
-            	<ul class="green">
-            		<a>4Chan</a>
-            			<li><a href="http://boards.4chan.org/g/">/g/</a></li>
-                    	<li><a href="http://boards.4chan.org/v/">/v/</a></li>
-                    	<li><a href="http://boards.4chan.org/a/">/a/</a></li>
-                    	<li><a href="https://boards.4chan.org/wg/">/wg/</a></li>
-                </ul>
+			<div class="contacts">
+				<p>
+					<a href="">Github Fork</a> |
+					<a href="https://gitlab.com/wolfiy/wlfys-minimal-startpage">Remixed original from Wolfiy</a> | 
+					<span id="light-mode-toggle" class="light-mode-toggle">Switch themes</span>
+				</p>
+			</div>
+		</div>
 
-                <ul class="red">
-            		<a>Entertainment</a>
-            			<li><a href="https://www.youtube.com/">Youtube</a></li>
-            			<li><a href="https://www.twitch.tv/">Twitch</a></li>
-            			<li><a href="https://www.reddit.com/">Reddit</a></li>
-            			<li><a href="https://soundcloud.com/">SoundCloud</a></li>
-            			<li><a href="https://kissanime.nz/kissanime-home.html">KissAnime</a></li>
-
-            	</ul>
-
-                <ul class="yellow">
-            		<a>Miscellaneous</a>
-            			<li><a href="https://mail.cock.li/">Mail</a></li>
-            			<li><a href="https://kiwifarms.net/">Kiwi Farms</a></li>
-            			<li><a href="https://nyaa.si/">Nyaa</a></li>
-            			<li><a href="https://lainchan.org/">Lainchan</a>
-            			<li><a href="https://pastebin.com/">Pastebin</a></li>
-            	</ul>
-
-            </nav>
-    	</div>
-
-        <div class="main" id="main2" style="display: none;">
-        	<img class="image-wrapper" src="img/side5.gif"/>
-
-        	<iframe  src="https://www.youtube.com/embed/DrxJCOVsV1E?list=PLNqBorCQlYFPf4cvVUi-1pet0tO_J1x-9" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        
-        <div class="bottomcontainer">
-
-        	<!--Button script-->
-			<script type="text/javascript">
-			function show( show1 ) {
-			  document.getElementById(show1).style.display="block";
-			}
-			function hide( hide1 ) {
-			  document.getElementById(hide1).style.display="none";
-			}
-			function tog( tog1 ) {
-			  document.getElementById(tog1).style.backgroundColor="#0972D6";
-			}
-			function toh( toh1 ) {
-			  document.getElementById(toh1).style.backgroundColor="#FFFFFF";
-			}
-			</script>
-
-			<div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
-			<div class="button" id="btn2" onclick = "show('main2');hide('main1');tog('btn2');toh('btn1');"></div>
-
-			<!--Live clock script-->
-			<div class="time" id="time">
-				<script>
-					//document.getElementById("main").innerHTML = Date();
-					function updateClock() {
-						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
-						var m = new Date();
-						var dateString =
-						  (days[ m.getDay() ]) + " " +
-						  ("0" + m.getDate()).slice(-2) + "/" +
-						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
-						  m.getFullYear() +" "+
-						  ("0" + m.getHours()).slice(-2) + ":" +
-						  ("0" + m.getMinutes()).slice(-2) + ":" +
-						  ("0" + m.getSeconds()).slice(-2);
-						
-						// set the content of the element with the ID time to the formatted string
-						document.getElementById('time').innerHTML = dateString;
-
-						// call this function again in 1000ms
-						setTimeout(updateClock, 1000);
-					}
-					updateClock(); // initial call
-				</script>
-        </div>
-        <div class="lovetext">愛を込めて作られ</div>
-    </div>
+		<script src="scripts/darkmode.js"></script>
+	</body>
+</html>
