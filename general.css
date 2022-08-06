@@ -225,6 +225,7 @@ form input[type="search"] {
 	width: 85%;
 	color: #FEFFFA;
 	transition: all 0.2s;
+	outline: none;
 }	
 
 form label {
