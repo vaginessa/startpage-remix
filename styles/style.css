@@ -99,12 +99,12 @@ form:focus-within input::placeholder {
 
 #content {
 	padding-top: 30px;
-	/*margin-left: 5%;*/
+	margin-left: 5%;
 	width: 100%;
 }
 
 #links_container {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 }
 
@@ -230,6 +230,7 @@ form:focus-within input::placeholder {
 @media (max-width: 650px) {
 	#main_window {
 		width: 100%;
+		margin-left: 0;
 	}
 }
 
