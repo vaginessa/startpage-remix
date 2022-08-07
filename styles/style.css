@@ -238,7 +238,7 @@ form:focus-within input::placeholder {
 	form input[type="search"] {
 		width: 90%;
 	}
-	.credits {
+	.contacts {
 		display: none;
 	}
 }
