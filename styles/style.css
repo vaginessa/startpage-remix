@@ -133,6 +133,7 @@ form:focus-within input::placeholder {
 	/* Need to find better way of resizing image while keeping it relative to the div next to it. for now change variable */
 	max-width: 250px;
 	object-fit: contain;
+	border-radius: 45px;
 }
 
 .bottom {
